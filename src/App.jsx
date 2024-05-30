@@ -9,7 +9,7 @@ function App() {
       <main className="flex h-max w-full flex-col">
         <Navbar />
         <PresCard />
-        <section className='w-full h-screen pl-4 pr-4'>
+        <section className='w-full h-[1000px] pl-4 pr-4 flex flex-col justify-start'>
           <RoadMap />
           <Projects/>
         </section>

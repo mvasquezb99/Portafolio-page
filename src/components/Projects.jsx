@@ -2,16 +2,14 @@ import React from "react";
 import ProjectsCard from "./ProjectsCard";
 function Projects() {
     return (
-        <>
+        <section className=" h-[50%] w-full" >
             <h1 className="text-4xl w-full text-center mb-4">Projects</h1>
-            <section className=" h-[46%] w-full" >
-                <div className="w-full h-full flex flex-row justify-evenly">
-                    <ProjectsCard title={'Web related'}/>
-                    <ProjectsCard title={'Non web related'}/>
-                    <ProjectsCard title={'Leadership'}/>
-                </div>
-            </section>
-        </>
+            <div className="w-full h-full flex flex-row justify-evenly">
+                <ProjectsCard title={'Web related'} id={'l'} />
+                <ProjectsCard title={'Non web related'} id={'c'} />
+                <ProjectsCard title={'Leadership'} id={'r'} />
+            </div>
+        </section>
     )
 }
 
