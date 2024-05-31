@@ -1,28 +1,33 @@
 import React from "react";
-import useToggle from "../hooks/useToggleState";
-function Project({ id, content }) {
-    const [isShown, toggle] = useToggle();
+import Tag from "./Tag";
 
+function Project({ content, type }) {
+    const { technologies, list } = content;
+    console.log(list);
     return (
-        <div
-            id={id}
-            name={'card'}
-            className=
-            {`w-full h-full ${id === '1' ? ' row-span-3' : id === '3' ? 'row-span-2' : id === '4' ? 'col-span-2' : 'row-span-1'}
-                bg-white/20  rounded-xl backdrop-blur-md hover:bg-white 
-                transition ease-in-out delay-100 hover:cursor-pointer hover:scale-110 hover:z-50 
-                flex flex-row justify-center items-center`}>
-            <div className=" w-14 h-14 rounded-sm flex flex-row justify-center items-center">
-                {
-                    !isShown ?
-                        <p className="text-white ">
-                            {content['logo']}
-                        </p>
-                    : <>
-                    </>
-                }
-            </div>
-            
+        <div className="w-full h-full flex flex-col justify-start">
+            <h2 className={`text-start w-full ${type === 'long-x' ? 'text-3xl' : type === 'xLarge' ? 'text-5xl' : 'text-4xl'}  mb-2`}>{content.name}</h2>
+            <p className="text-base mb-2.5">
+                {content.description}
+            </p>
+            {
+                technologies.length !== 0 ? <div className="w-full h-7 flex flex-row flex-wrap">
+                    {
+                        technologies.map((t) => (
+                            <Tag text={t} />
+                        ))
+                    }
+                </div> : list.length !== 0 ? <div className="pl-4">
+                    <ul className=" list-disc h-full w-full">
+                        {
+                            list.map((l) => (
+                                <li className="text-sm">{l}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
+                    : <></>
+            }
         </div>
     )
 }
