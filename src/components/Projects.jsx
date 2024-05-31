@@ -6,7 +6,7 @@ function Projects() {
             <h1 className="text-4xl w-full text-center mb-4">Projects</h1>
             <div className="w-full h-full flex flex-row justify-evenly">
                 <ProjectsCard title={'Web related'} id={'l'} />
-                <ProjectsCard title={'Non web related'} id={'c'} />
+                <ProjectsCard title={'Non web related'} id={'c'}/>
                 <ProjectsCard title={'Leadership'} id={'r'} />
             </div>
         </section>
