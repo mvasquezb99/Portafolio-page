@@ -10,18 +10,17 @@ function BentoBox({ type, id, content }) {
                     type === 'large' ? 'col-span-2 row-span-2' :
                         type === 'long-x' ? 'col-span-2' :
                             type === 'long-y' ? 'row-span-2' :
-                                type === 'xLarge' ? 'col-span-3 row-span-3' :
+                                type === 'xLarge' ? 'col-span-3 row-span-2' :
                                     type === 'long-xl' ? 'col-span-3' : ''}
                 bg-white/20  rounded-xl backdrop-blur-md 
                 transition ease-in-out delay-100 hover:z-50 
                 flex flex-row justify-center items-center p-4`}>
-
             {
                 id === 'title' ? <>
                     <h1 className={`flex flex-row justify-center items-center ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}>
                         {content}
                     </h1>
-                </> : id[0] === 'p' ?
+                </> : id[0] === 'p' || id[0] === 't'    ?
                     <Project content={content} type={type} />
                     : id === 'semester' ?
                         <div className="w-full h-full flex flex-col justify-center items-center">
