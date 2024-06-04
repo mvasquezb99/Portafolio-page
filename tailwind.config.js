@@ -18,6 +18,10 @@ export default {
       },
       animation:{
         'pulsePro': 'pulsePro 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
+      },
+      backgroundImage:{
+        'blueWaves':"url('./src/assets/layered-waves-haikei-low.svg')",
+        'blueWaves-up':"url('./src/assets/layered-waves-haikei-up.svg')"
       }
     },
   },

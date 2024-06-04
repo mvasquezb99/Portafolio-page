@@ -1,13 +1,12 @@
 import React from "react";
 import Tag from "./Tag";
 
-function Project({ content, type }) {
+function Project({ content, type, id }) {
     const { technologies, list } = content;
-    console.log(list);
     return (
         <div className="w-full h-full flex flex-col justify-start">
             <h2 className={`text-start w-full ${type === 'long-x' ? 'text-3xl' : type === 'xLarge' ? 'text-5xl' : 'text-4xl'}  mb-2`}>{content.name}</h2>
-            <p className="text-base mb-2.5">
+            <p className="text-base mb-2">
                 {content.description}
             </p>
             {

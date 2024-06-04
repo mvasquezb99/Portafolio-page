@@ -1,9 +1,32 @@
 import React from "react";
 import Project from "./Project";
-function BentoBox({ type, id, content }) {
+function BentoBox({ type, id, content = '', name = '' }) {
+
+    const handleHover = (e) => {
+        let targets;
+
+        if(e.target.id === 'title-1'){
+            targets = document.querySelectorAll('#p');
+        } else if (e.target.id === 'title-2'){
+            targets = document.querySelectorAll('#e');
+        }
+
+        if (e.type === 'mouseenter' && (e.target.id === 'title-1' || e.target.id === 'title-2')) {
+            e.target.classList.add('bg-white/30');
+            targets.forEach((p) => {
+                p.classList.add('bg-white/30');
+            })
+        } else if (e.type === 'mouseleave') {
+            e.target.classList.remove('bg-white/30')
+            targets.forEach((p) => {
+                p.classList.remove('bg-white/30');
+            })
+        }
+    }
     return (
         <div
             name={'card'}
+            id={id}
             className=
             {`w-full h-full ${type === 'small' ? ' col-span-1' :
                 type === 'medium' ? 'row-span-2' :
@@ -12,22 +35,22 @@ function BentoBox({ type, id, content }) {
                             type === 'long-y' ? 'row-span-2' :
                                 type === 'xLarge' ? 'col-span-3 row-span-2' :
                                     type === 'long-xl' ? 'col-span-3' : ''}
-                bg-white/20  rounded-xl backdrop-blur-md 
+                bg-white/20  rounded-xl backdrop-blur-md
                 transition ease-in-out delay-100 hover:z-50 
-                flex flex-row justify-center items-center p-4`}>
+                flex flex-row justify-center items-center p-4`} onMouseEnter={handleHover} onMouseLeave={handleHover}>
             {
-                id === 'title' ? <>
-                    <h1 className={`flex flex-row justify-center items-center ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}>
+                id === 'title-1' || id === 'title-2' ? <>
+                    <h1 className={`hover:cursor-pointer flex flex-row justify-center items-center ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}>
                         {content}
                     </h1>
-                </> : id[0] === 'p' || id[0] === 't'    ?
-                    <Project content={content} type={type} />
-                    : id === 'semester' ?
+                </> : id === 'p' || (id === 'e' && name === '') ?
+                    <Project content={content} type={type} id={id} />
+                    : name === 'semester' ?
                         <div className="w-full h-full flex flex-col justify-center items-center">
                             <h3 className="text-7xl">6<span className="text-sm">th</span></h3>
                             <small className="text-xs text-center">Semester in EAFIT University</small>
                         </div>
-                        : id === 'ranks' ?
+                        : name === 'ranks' ?
                             <div className="w-full h-full">
                                 <h2 className="text-lg text-center">Languages</h2>
                                 <div className="w-full h-fit flex flex-col justify-center items-center">
