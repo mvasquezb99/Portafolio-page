@@ -1,28 +1,7 @@
 import React from "react";
 import Project from "./Project";
+import "../styles/BentoBox.css";
 function BentoBox({ type, id, content = '', name = '' }) {
-
-    const handleHover = (e) => {
-        let targets;
-
-        if(e.target.id === 'title-1'){
-            targets = document.querySelectorAll('#p');
-        } else if (e.target.id === 'title-2'){
-            targets = document.querySelectorAll('#e');
-        }
-
-        if (e.type === 'mouseenter' && (e.target.id === 'title-1' || e.target.id === 'title-2')) {
-            e.target.classList.add('bg-white/30');
-            targets.forEach((p) => {
-                p.classList.add('bg-white/30');
-            })
-        } else if (e.type === 'mouseleave') {
-            e.target.classList.remove('bg-white/30')
-            targets.forEach((p) => {
-                p.classList.remove('bg-white/30');
-            })
-        }
-    }
     return (
         <div
             name={'card'}
@@ -36,8 +15,8 @@ function BentoBox({ type, id, content = '', name = '' }) {
                                 type === 'xLarge' ? 'col-span-3 row-span-2' :
                                     type === 'long-xl' ? 'col-span-3' : ''}
                 bg-white/20  rounded-xl backdrop-blur-md
-                transition ease-in-out delay-100 hover:z-50 
-                flex flex-row justify-center items-center p-4`} onMouseEnter={handleHover} onMouseLeave={handleHover}>
+                transition ease-in-out delay-100 flex flex-row 
+                justify-center items-center p-4`}>
             {
                 id === 'title-1' || id === 'title-2' ? <>
                     <h1 className={`hover:cursor-pointer flex flex-row justify-center items-center ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}>
@@ -72,7 +51,7 @@ function BentoBox({ type, id, content = '', name = '' }) {
                                     </svg>
                                 </div>
                             </div>
-                            : ''
+                            : <></>
             }
         </div>
     )

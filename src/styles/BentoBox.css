@@ -1,0 +1,12 @@
+#title-1:hover ~ #p, #title-1:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#title-2:hover ~ #e, #title-2:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#title-1::before{
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+}

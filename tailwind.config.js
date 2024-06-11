@@ -8,7 +8,7 @@ export default {
     extend: {
       keyframes: {
         pulsePro: {
-          '0%, 100%' : {
+          '0%, 100%': {
             opacity: 1,
           },
           '50%': {
@@ -16,12 +16,15 @@ export default {
           }
         },
       },
-      animation:{
+      animation: {
         'pulsePro': 'pulsePro 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
       },
-      backgroundImage:{
-        'blueWaves':"url('./src/assets/layered-waves-haikei-low.svg')",
-        'blueWaves-up':"url('./src/assets/layered-waves-haikei-up.svg')"
+      backgroundImage: {
+        'blueWaves': "url('./src/assets/layered-waves-haikei-low.svg')",
+        'blueWaves-up': "url('./src/assets/layered-waves-haikei-up.svg')",
+        'blob-down': "url('./src/assets/blob-haikei.svg')",
+        'blob-center': "url('./src/assets/blob-haikei-center.svg')",
+        'personal': "url('./src/images/personalPhoto.jpg')",
       }
     },
   },
