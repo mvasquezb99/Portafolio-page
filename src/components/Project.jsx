@@ -20,7 +20,7 @@ function Project({ content, type, id }) {
                     <ul className=" list-disc h-full w-full">
                         {
                             list.map((l) => (
-                                <li className="text-sm">{l}</li>
+                                <li className="text-base">{l}</li>
                             ))
                         }
                     </ul>

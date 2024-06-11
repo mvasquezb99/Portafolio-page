@@ -4,7 +4,7 @@ import projectsContent from "../helpers/ProjectsContent";
 function Projects() {
     const {p1,p2,p3,t1,t2} = projectsContent;
     return (
-        <section className=" h-[52%] 2xl:h-full pb-4 w-full flex flex-col items-center mt-2 " >
+        <section className=" h-[52%] 2xl:h-[55%] pb-4 w-full flex flex-col items-center" >
             <div className="2xl:w-4/6 xl:w-4/5 h-full grid grid-cols-8 grid-rows-3 gap-1.5">
                 <BentoBox type={'long-x'} id={'title-2'} content={'Education'}/>
                 <BentoBox type={'small'} id={'e'} name={'semester'}/>
