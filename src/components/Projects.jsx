@@ -5,7 +5,7 @@ function Projects() {
     const {p1,p2,p3,t1,t2} = projectsContent;
     return (
         <section className=" h-[52%] 2xl:h-[55%] pb-4 w-full flex flex-col items-center" >
-            <div className="2xl:w-4/6 xl:w-4/5 h-full grid grid-cols-8 grid-rows-3 gap-1.5">
+            <div className=" w-4/6 h-full grid grid-cols-8 grid-rows-3 gap-1.5 min-w-[1300px] max-w-[1400px]">
                 <BentoBox type={'long-x'} id={'title-2'} content={'Education'}/>
                 <BentoBox type={'small'} id={'e'} name={'semester'}/>
                 <BentoBox type={'long-x'} id={'e'} content={t1}/>

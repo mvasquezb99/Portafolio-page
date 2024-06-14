@@ -4,6 +4,7 @@ import PresCard from './components/PresCard'
 import RoadMap from './components/RoadMap'
 import Projects from './components/Projects'
 import AboutMe from './components/AboutMe'
+import Footer from './components/Footer'
 function App() {
   return (
     <>
@@ -18,6 +19,9 @@ function App() {
         </section>
         <section id="aboutMe" className='w-full h-screen flex flex-col justify-start bg-blob-center bg-cover aspect-square bg-no-repeat bg-center'>
           <AboutMe />
+        </section>
+        <section className=' w-3/5 h-64'>
+          <Footer />
         </section>
       </main>
     </>
