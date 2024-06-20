@@ -1,0 +1,19 @@
+
+.presContainer, .roadMapContainer, .aboutMeContainer, .personalContainer{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.presContainer{
+    background-image: url('./src/assets/layered-waves-haikei-low.svg');
+}
+.roadMapContainer{
+    background-image: url('./src/assets/layered-waves-haikei-up.svg');
+}
+.aboutMeContainer{
+    background-image: url('./src/assets/blob-haikei-center.svg');
+}
+.personalContainer{
+    background-image: url('./src/images/personalPhoto.jpg');
+}
