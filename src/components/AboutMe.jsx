@@ -6,7 +6,7 @@ function AboutMe() {
 
         <section className="w-full h-full flex flex-row justify-center items-center">
             <article className="w-2/3 h-2/4 flex flex-row justify-center items-center">
-                <div className="bg-transparent rounded-full w-80 h-80 bg-personal bg-cover aspect-square bg-no-repeat bg-center max-h-96 max-w-96" />
+                <div className="bg-transparent rounded-full w-80 h-80 bg-personal bg-cover aspect-square bg-no-repeat bg-center max-h-96 max-w-96 min-w-[310px]" />
                 <div className="w-1/2 pl-8 h-2/3 min-w-[640px]">
                     <h1 className="text-4xl mb-2">About me</h1>
                     <p className=" text-lg mb-2">Hi👋, as you know by now, my name is <span className=" text-[#fb8500] font-semibold">Miguel Vásquez Bojanini</span>. I am a fully committed student at EAFIT University and am currently going through the 6th semester of computer science. I´m passionate about design and web development (backend and frontend), always trying to give the user a beautiful and complete experience.</p>
