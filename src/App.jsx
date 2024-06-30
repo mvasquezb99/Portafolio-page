@@ -14,7 +14,7 @@ function App() {
         <section id="home" className='w-full h-screen flex flex-col justify-start items-center presContainer'>
           <PresCard />
         </section>
-        <section id="experience" className='w-full h-[1000px] flex flex-col justify-start roadMapContainer'>
+        <section id="experience" className='w-full h-screen flex flex-col justify-start roadMapContainer'>
           <RoadMap />
           <Projects />
         </section>
