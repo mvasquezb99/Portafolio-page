@@ -16,10 +16,14 @@ function BentoBox({ type, id, content = '', name = '' }) {
                                     type === 'long-xl' ? 'col-span-3' : ''}
                 bg-white/20  rounded-xl backdrop-blur-md
                 transition ease-in-out delay-100 flex flex-row 
-                justify-center items-center p-4`}>
+                justify-center items-center p-4 overflow-hidden`}>
             {
                 id === 'title-1' || id === 'title-2' ? <>
-                    <h1 className={`hover:cursor-pointer flex flex-row justify-center items-center ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}>
+                    <h1 className={`hover:cursor-pointer flex flex-row justify-center items-center 
+                            ${type === 'long-xl' ? 'text-8xl' : 'text-6xl'} 
+                                bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% 
+                                    to-emerald-500 to-90% text-transparent bg-clip-text h-full w-full`}
+                    >
                         {content}
                     </h1>
                 </> : id === 'p' || (id === 'e' && name === '') ?
